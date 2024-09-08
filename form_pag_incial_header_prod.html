@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Inclui Bootstrap para estilo -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"> <!-- ícones -->
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+        }
+
+        header {
+            background-color: #ffffff;
+            color: #ffffff;
+            padding: 15px 30px;
+            padding-left: 100px;
+            padding-right: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .logo img {
+            height: 50px; /* Ajuste conforme o tamanho do logotipo */
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #33ABC6;
+            text-decoration: none;
+            font-weight: bold;
+            padding-left: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .hero-section {
+            background-image: url(/imagens/capa_inicial.png);
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .search-bar {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            max-width: 800px;
+            border: #33ABC6;
+            display: flex;
+        }
+
+        .search-bar input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            outline: none;
+        }
+
+        .search-bar i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .form-container{
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .carousel-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            position: relative;
+            align-items: center;
+        }
+
+        .carousel-info {
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            align-items: center;
+        }
+
+        .carousel-info h4, .carousel-info h5 {
+            margin: 20px 0;
+        }
+
+        .carousel-info h4 {
+            font-weight: bold;
+        }
+
+        .carousel-info h5 {
+            color: #777;
+            font-size: 18px;
+        }
+
+        .btn-action {
+            background-color: #9ad4c2;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            width: 40%;
+            text-align: center;
+            font-size: 20px;
+            margin-top: 20px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-action:hover {
+            background-color: #6dbea4;
+        }
+
+        footer {
+            background-color: #ffffff;
+            padding: 20px 100px;
+            text-align: center;
+            font-size: 16px;
+            color: #555;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #33ABC6;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-submit {
+            background-color: #9ad4c2;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            width: 30%;
+            text-align: center;
+            font-size: 20px;
+            margin-top: 20px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .btn-submit:hover {
+            background-color: #6dbea4;
+        }
+    </style>
+</head>
+<!-- inserindo aqui a solcitação de header com links de navegação -->
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagens/LOGO.png" alt="Logotipo do Sistema">
+        </div>
+        <nav class="nav-links">
+            <a href="form_cadastro_cliente.html" target="_blank"><i class="bi bi-person-plus" style="font-size: 2.5rem;"></i> Criar Conta</a>
+            <a href="#"><i class="bi bi-cart" style="font-size: 2.5rem;"></i> Meu Carrinho</a>
+            <a href="#"><i class="bi bi-question-circle" style="font-size: 2.5rem;"></i> Ajuda</a>
+        </nav>
+    </header>
+
+    <!-- neste ponto inseri uma área principal de hero section para deixar coerente com o Mocks desenvolvidos na fase 1 -->
+    <div class="hero-section">
+        <div class="search-bar">
+           <input type="text" placeholder="Busque por produtos ou serviços...">
+           <i class="bi bi-search" style=font-size:1.5rem></i> 
+        </div>
+
+    <!-- formatação de carrosseis de imagens de produtos e serviços com as repectivas ações de agendamento ou compra -->
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <!-- Carrossel de Produtos Ração Seca-->
+            <div class="col-sm-2">
+                <div class="carousel-container">
+                    <div id="carouselProdutos1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagens/racaoseca1.png" class="d-block w-100" alt="Ração Seca 1">
+                                <div class="carousel-info">
+                                    <h4>Ração Seca - Pet Delícia</h4>
+                                    <h5>Deliciosa ração seca 500g</h5>
+                                    <h4>R$ 50,00</h4>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="imagens/racaoseca2.png" class="d-block w-100" alt="Ração Seca 2">
+                                <div class="carousel-info">
+                                    <h4>Ração Seca - Pet Delícia</h4>
+                                    <h5>Deliciosa ração seca 500g</h5>
+                                    <h4>R$ 40,00</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProdutos1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProdutos1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <button type="button" class="btn-action d-flex justify-content-center" data-carousel="carouselProdutos1" data-action="COMPRAR">COMPRAR</button>
+                </div>
+            </div>
+
+            <!-- Carrossel de Produtos Ração Úmida-->
+            <div class="col-sm-2">
+                <div class="carousel-container">
+                    <div id="carouselProdutos2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagens/racaoumida1.png" class="d-block w-100" alt="Ração Úmida 1">
+                                <div class="carousel-info">
+                                    <h4>Ração Úmida - Pet Delícia</h4>
+                                    <h5>Deliciosa ração úmida 500g</h5>
+                                    <h4>R$ 60,00</h4>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="imagens/racaoumida2.png" class="d-block w-100" alt="Ração Úmida 2">
+                                <div class="carousel-info">
+                                    <h4>Ração Úmida - Nature</h4>
+                                    <h5>Deliciosa ração úmida 500g</h5>
+                                    <h4>R$ 55,00</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProdutos2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProdutos2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <button type="button" class="btn-action d-flex justify-content-center" data-carousel="carouselProdutos2" data-action="COMPRAR">COMPRAR</button>
+                </div>
+            </div>
+            
+            <!-- Carrossel de Serviços Banho-->
+            <div class="col-sm-2">
+                <div class="carousel-container">
+                    <div id="carouselServicos1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagens/banho1.png" class="d-block w-100" alt="Banho P">
+                                <div class="carousel-info">
+                                    <h4>Serviço de Banho</h4>
+                                    <h5>Pet Porte P</h5>
+                                    <h4>R$ 65,00</h4>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="imagens/banho2.png" class="d-block w-100" alt="Banho G">
+                                <div class="carousel-info">
+                                    <h4>Serviço de Banho</h4>
+                                    <h5>Pet Porte G</h5>
+                                    <h4>R$ 110,00</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselServicos1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselServicos1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <button type="button" class="btn-action d-flex justify-content-center" data-carousel="carouselServicos1" data-action="AGENDAR">AGENDAR</button>
+                </div>
+            </div>
+
+            <!-- Carrossel de Serviços Tosa-->
+            <div class="col-sm-2">
+                <div class="carousel-container">
+                    <div id="carouselServicos2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagens/tosa1.png" class="d-block w-100" alt="Tosa P">
+                                <div class="carousel-info">
+                                    <h4>Serviço de Tosa</h4>
+                                    <h5>Pet Porte P</h5>
+                                    <h4>R$ 80,00</h4>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="imagens/tosa2.png" class="d-block w-100" alt="Tosa G">
+                                <div class="carousel-info">
+                                    <h4>Serviço de Tosa</h4>
+                                    <h5>Pet Porte G</h5>
+                                    <h4>R$ 150,00</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselServicos2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselServicos2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <button type="button" class="btn-action d-flex justify-content-center" data-carousel="carouselServicos2" data-action="AGENDAR">AGENDAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal do Formulário -->
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="purchaseForm" action="/processar-compra" method="POST">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="formModalLabel">Finalizar <span id="actionType">Compra</span></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Detalhes do Item Selecionado -->
+                        <p id="selected-item-details"></p>
+                        
+                        <!-- Campos que dependerão de acordo com o produto/serviço selecionado -->
+                        <div id="produto-fields" style="display: none;">
+                            <div class="mb-3">
+                                <label for="entrega" class="form-label">Deseja entrega em casa?</label>
+                                <select class="form-select" id="entrega" name="entrega">
+                                    <option value="sim">Sim</option>
+                                    <option value="nao">Não</option>
+                                </select>
+                            </div>
+
+                            <!-- Campo para endereço de entrega -->
+                            <div class="mb-3" id="endereco-field" style="display: none;">
+                                <label for="endereco" class="form-label">Endereço para entrega</label>
+                                <input type="text" class="form-control" id="endereco" name="endereco">
+                            </div>
+
+                            <!-- Novo campo para selecionar tipo de endereço (Casa ou Trabalho) -->
+                            <div class="mb-3" id="tipo-endereco-field" style="display: none;">
+                                <label for="tipo-endereco" class="form-label">Selecione o endereço de entrega</label>
+                                <select class="form-select" id="tipo-endereco" name="tipo-endereco">
+                                    <option value="casa">Casa</option>
+                                    <option value="trabalho">Trabalho</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3" id="endereco-field" style="display: none;">
+                                <label for="endereco" class="form-label">Endereço para entrega</label>
+                                <input type="text" class="form-control" id="endereco" name="endereco">
+                            </div>
+                        </div>
+    
+                        <div id="servico-fields" style="display: none;">
+                            <div class="mb-3">
+                                <label for="data" class="form-label">Data do Agendamento</label>
+                                <input type="date" class="form-control" id="data" name="data" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="hora" class="form-label">Hora do Agendamento</label>
+                                <input type="time" class="form-control" id="hora" name="hora" required>
+                            </div>
+                            <div class="mb-3" id="tele-busca-field" style="display: none;">
+                                <label for="tele-busca" class="form-label">Deseja tele-busca?</label>
+                                <select class="form-select" id="tele-busca" name="tele-busca">
+                                    <option value="sim">Sim</option>
+                                    <option value="nao">Não</option>
+                                </select>
+                            </div>
+                            <!-- Campo para Tele-Busca -->
+                            <div class="mb-3" id="tele-busca-field" style="display: none;">
+                                <label for="tele-busca" class="form-label">Deseja tele-busca?</label>
+                                <select class="form-select" id="tele-busca" name="tele-busca">
+                                    <option value="sim">Sim</option>
+                                    <option value="nao">Não</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Novo campo para Endereço da Tele-Busca -->
+                            <div class="mb-3" id="endereco-tele-busca-field" style="display: none;">
+                                <label for="endereco-tele-busca" class="form-label">Endereço para tele-busca</label>
+                                <input type="text" class="form-control" id="endereco-tele-busca" name="endereco-tele-busca">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-submit">CONFIRMAR</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- rodapé -->
+    <footer>
+        <p>2024 PETCLUB Ltda. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+    </footer>
+
+    <!-- Scripts do Bootstrap e jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Seleciona todos os botões de ação
+            const actionButtons = document.querySelectorAll('.btn-action');
+
+            actionButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const carouselId = this.getAttribute('data-carousel');
+                    const actionType = this.getAttribute('data-action');
+
+                    // Seleciona o carrossel correspondente
+                    const carousel = document.getElementById(carouselId);
+                    if (!carousel) return;
+
+                    // Encontra o item ativo no carrossel
+                    const activeItem = carousel.querySelector('.carousel-item.active .carousel-info');
+
+                    if (!activeItem) return;
+
+                    // Captura as informações do item ativo
+                    const title = activeItem.querySelector('h4').textContent;
+                    const description = activeItem.querySelector('h5').textContent;
+                    const price = activeItem.querySelector('h4:nth-of-type(2)').textContent;
+
+                    // Exibe os detalhes do item na modal
+                    const selectedItemDetails = document.getElementById('selected-item-details');
+                    selectedItemDetails.innerHTML = `<strong>${title}</strong><br>${description}<br><strong>${price}</strong>`;
+
+                    // Define o tipo de ação no modal (Compra ou Agendamento)
+                    const actionTypeSpan = document.getElementById('actionType');
+                    actionTypeSpan.textContent = actionType.toLowerCase() === 'comprar' ? 'Compra' : 'Agendamento';
+
+                    // Exibe os campos correspondentes ao produto ou serviço
+                    const produtoFields = document.getElementById('produto-fields');
+                    const servicoFields = document.getElementById('servico-fields');
+                    const teleBuscaField = document.getElementById('tele-busca-field'); // Campo de Tele-Busca
+                    const enderecoTeleBuscaField = document.getElementById('endereco-tele-busca-field'); // Novo campo de Endereço de Tele-Busca
+                    
+                    if (actionType.toLowerCase() === 'comprar') {
+                        produtoFields.style.display = 'block';
+                        servicoFields.style.display = 'none';
+                        teleBuscaField.style.display = 'none'; // Esconde o campo de tele-busca se for compra
+                        enderecoTeleBuscaField.style.display = 'none'; // Esconde o campo de endereço da tele-busca
+
+                    } else {
+                        produtoFields.style.display = 'none';
+                        servicoFields.style.display = 'block';
+
+                        // Exibe o campo de tele-busca ao agendar
+                        teleBuscaField.style.display = 'block';
+
+                        // Verifica o valor atual do seletor de tele-busca e ajusta o campo de endereço
+                        ajustarCampoTeleBusca();
+                    }
+
+                    // Função para ajustar o campo de endereço da tele-busca
+                    function ajustarCampoTeleBusca() {
+                        const teleBuscaSelect = document.getElementById('tele-busca');
+                        if (teleBuscaSelect.value === 'sim') {
+                            enderecoTeleBuscaField.style.display = 'block';
+                        } else {
+                            enderecoTeleBuscaField.style.display = 'none';
+                        }
+                    }
+
+                    // Verifica o valor atual da entrega (Sim ou Não) e ajusta os campos de endereço
+                    const entregaSelect = document.getElementById('entrega');
+                    const enderecoField = document.getElementById('endereco-field');
+                    const tipoEnderecoField = document.getElementById('tipo-endereco-field');
+            
+                    // Função para exibir os campos de entrega e tipo de endereço
+                    function ajustarCamposEntrega() {
+                        if (entregaSelect.value === 'sim') {
+                            enderecoField.style.display = 'block';
+
+                        // Exibe o campo "Selecione o endereço de entrega" apenas se for PRODUTO1 ou PRODUTO2
+                        const selectedItemDetailsText = selectedItemDetails.textContent;
+                        if (selectedItemDetailsText.includes('PRODUTO1') || selectedItemDetailsText.includes('PRODUTO2')) {
+                            tipoEnderecoField.style.display = 'block';
+                        } else {
+                            tipoEnderecoField.style.display = 'none';
+                        }
+                    } else {
+                        enderecoField.style.display = 'none';
+                        tipoEnderecoField.style.display = 'none'; // Esconde o campo caso a opção "não" seja selecionada
+                    }
+                }
+
+                // Ajusta os campos ao abrir a modal
+                ajustarCamposEntrega();
+
+                // Ajusta os campos de tele-busca ao abrir a modal
+                ajustarCampoTeleBusca();
+
+                // Adiciona evento de mudança no select de entrega para ajustar os campos dinamicamente
+                entregaSelect.addEventListener('change', ajustarCamposEntrega);
+
+                // Evento para exibir o campo de endereço de tele-busca quando "Sim" for selecionado
+                const teleBuscaSelect = document.getElementById('tele-busca');
+                teleBuscaSelect.addEventListener('change', function () {
+                    if (teleBuscaSelect.value === 'sim') {
+                        enderecoTeleBuscaField.style.display = 'block';
+                    } else {
+                        enderecoTeleBuscaField.style.display = 'none';
+                    }
+                });
+
+                // Abre o modal
+                const formModal = new bootstrap.Modal(document.getElementById('formModal'));
+                formModal.show();
+            });
+        });
+    });    
+    </script>
+</body>
+</html>
